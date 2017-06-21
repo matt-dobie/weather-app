@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <title>Weather App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons-wind.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.plus-names.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="row top-margin-md">
+        <div class="col-md-12">
+          <h1 id="location"></h1>
+        </div>
+      </div>
+      <div class="row top-margin-sm">
+        <div class="col-12">
+          <div class="temp-info">
+            <h2 id="temp"></h2>
+            <p><span id="celsius" class="active">C</span>/<span id="farenheit">F</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p id="loading">Finding your location...</p>
+        </div>
+      </div>
+      <div class="row top-margin-sm">
+        <div class="col-12">
+          <p>
+            <span id="description"></span>
+            <i id="main-icon"></i>
+          </p>
+        </div>
+      </div>
+      <div class="row top-margin-md">
+        <div class="col-4">
+          <i class="icon wi wi-strong-wind"></i>
+          <p id="wind-speed" class="sub">2 m/s</p>
+        </div>
+        <div class="col-4 bordered">
+          <i class="icon wi wi-thermometer"></i>
+          <p class="sub">
+            <span id="max" class="active" style="padding-right: 3px">20&deg;</span>
+            <span id="min" style="padding-left: 3px">15&deg;</span>
+          </p>
+        </div>
+        <div class="col-4">
+          <i class="icon wi wi-raindrop"></i>
+          <p id="humidity" class="sub">80%</p>
+        </div>
+      </div>
+    </div>
+    <div class="container top-margin-lg details">
+      <div class="row">
+        <div class="col-sm-6">
+          <p id="apparent-temp"></p>
+        </div>
+        <div class="col-sm-6">
+          <p id="rain-prob"></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <p id="dew-point"></p>
+        </div>
+        <div class="col-sm-6">
+          <p id="cloud-cover"></p>
+        </div>
+      </div>
+      <div class="row top-margin-md">
+        <div class="col-12">
+          <p id="forecast" class="padded"></p>
+        </div>
+      </div>
+    </div>
+    <footer class="top-margin-lg">
+      <div class="container">
+        <p>
+          Powered by <a id="dark-sky" href="https://darksky.net/poweredby/" target="_blank">Dark Sky</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+
+</html>
