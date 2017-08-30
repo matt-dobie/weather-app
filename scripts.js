@@ -52,7 +52,7 @@ $(document).ready(function() {
       console.log(long);
 
       // Dark Sky API
-      var api = "https://crossorigin.me/https://api.darksky.net/forecast/b5afb3409bb31409cd1deb30efcd3ebb/" + lat + "," + long + "?units=si";
+      var api = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/b5afb3409bb31409cd1deb30efcd3ebb/" + lat + "," + long + "?units=si";
 
       $.getJSON(api, function(data) {
         console.log(data);
@@ -81,7 +81,7 @@ $(document).ready(function() {
 
         // Get wind, cloud, rain, humidity and summary
         var windSpeed = data.currently.windSpeed;
-        var humidity = data.currently.humidity * 100;
+        var humidity = Math.round(data.currently.humidity * 100, 0);
         var rainProb = Math.round(data.currently.precipProbability * 100, 0);
         var cloudCover = Math.round(data.currently.cloudCover * 100, 0);
         var dewPointCelsius = Math.round(data.currently.dewPoint, -1);
