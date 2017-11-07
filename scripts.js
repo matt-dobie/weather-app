@@ -1,3 +1,9 @@
+/*
+  Author: Matthew Dobie
+  Author URL: mattdobie.com
+  Description: Script for Local Weather
+*/
+
 
 // Get appropriate icon class
 function getIcon(icon) {
@@ -48,14 +54,12 @@ $(document).ready(function() {
     navigator.geolocation.getCurrentPosition(function(position) {
       lat = position.coords.latitude;
       long = position.coords.longitude;
-      console.log(lat);
-      console.log(long);
 
       // Dark Sky API
       var api = "https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/b5afb3409bb31409cd1deb30efcd3ebb/" + lat + "," + long + "?units=si";
 
+      // Get JSON data
       $.getJSON(api, function(data) {
-        console.log(data);
 
         // Get location data
         var rawLocation = data.timezone.split("/");
